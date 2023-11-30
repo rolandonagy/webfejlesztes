@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="HU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nagy Roland Olivér">
+    <meta name="copyright" content="Oktatási célra, nem hivatalos fradi oldal.">
+    <meta name="description" content="Fradi szurkólói oldal">
+    <link rel="stylesheet" href="../CSS/fradi.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Kepek/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Kepek/favicon-32x32.png">
+    <link rel="shortcut icon" href="../Kepek/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&displ" rel="stylesheet">
+    <script src="../jquery/jquery-3.7.1.min.js"></script>
+    <script src="../jquery/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myform").validate({
+                rules: {
+                    nev: "required",
+
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    jelszo: "required",
+                    telsz: "required",
+                    szuletes: "required",
+                    nem: "required",
+                    elfogad: "required"
+                },
+
+                messages: {
+                    nev: "<br>Írd be a teljes neved!",
+                    email: "<br>Írd be az email címed, hogy el tudjunk érni vagy valós emailt adj meg!",
+                    jelszo: "<br>Kérlek add meg a jelszavad a profil létrehozás miatt!",
+                    telsz: "<br>Írd be az telefonszámod címed, hogy el tudjunk érni!",
+                    szuletes: "<br>Kérlek töltsd ki a születési dátumod!",
+                    nem: "<br>Kérlek add meg a nemed!",
+                    elfogad: "<br>Ha nem szeretnél tag lenni, úgy kérlek hagyd abba a kitöltést!"
+                },
+            });
+        });
+    </script>
+    <title>Fradi - Főoldal</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="../Kepek/header_logo.png" alt="Fradi logója" class="boritokep">
+        </a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Fradiról</a></li>
+            <li><a href="stadion.html">Stadionról</a></li>
+            <li><a href="jatekosok.html">Játékosok</a></li>
+            <li><a href="#" id="jelenlegi">Szurkólók</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <article>
+            <h2>B-Közép</h2>
+            <p>A ferencvárosi szurkolókat általában fradistának nevezik (amely, a német eredetű Franzstadt köznyelvi
+                rövidülése). A kapu mögött helyezkedik el a "Tábor", ismertebb nevén a Ferencvárosi B-Közép.
+                Magyarországon a legjobb szurkolók között tartják számon őket, abban a tekintetben, hogy az ország egyik
+                legkitartóbb szurkolóiról van szó (melyet többször bizonyítottak az évek alatt), a meccseken mutatott
+                koreográfiák, látványok (zászlókkal, sálakkal felszerelkezve, pirotechnikai eszközökkel, feliratokkal,
+                plakátokkal, táblákkal, üzenetekkel), buzdítások, énekek alapján is a legelkötelezettebbek közé
+                tartoznak, hagyományaik is a régmúltra nyúlnak vissza.</p>
+            <p>
+                A Fradi szurkolói vannak a legtöbben Magyarországon, hiszen nem csak Budapesten, de vidéken és a határon
+                túlról is sok hívet szerzett a csapat immár több, mint 120 éves történelme alatt.
+            </p>
+            <p>
+                Korabeli tudósítások számolnak be arról, hogy a ferencvárosi szurkolók már 1928-ban szervezett
+                körülmények között, több száz fővel utaztak idegenbeli mérkőzéseikre. A világon elsőként jelent meg
+                szervezett formában a lelátón a szurkolás, ebben az évben különvonattal, mintegy 600 fővel vonatoztak le
+                Szegedre. Manapság sok csapat táborára használják a B-Közép kifejezést, habár ennek az eredete is a
+                Fradihoz köthető. A régi Üllői úti stadion "B" tribünjének közepén helyezkedtek el a fanatikus
+                szurkolók, innen ered a B-Közép elnevezés.
+            </p>
+        </article>
+        <figure>
+            <img src="../Kepek/bkozep.jpg" alt="Bkozep" id="bkozep">
+        </figure>
+    </div>
+
+    <div id="legyelteis">
+        <article>
+            <h2>Legyél te is B-Közép tag!</h2>
+            <p>Ahhoz, hogy tag legyél töltsd ki az alábbi jelentkezési lapot!</p>
+            <form action="http://szamtud.uni-corvinus.hu/receive.php" method="post" id="myform">
+                <label for="nev">Teljes név: </label>
+                <input type="text" name="nev" id="nev">
+                <br>
+                <br>
+                <label for="email">E-mail cím: </label>
+                <input type="text" name="email" id="email">
+                <br>
+                <br>
+                <label for="jelszo">Jelszó: </label>
+                <input type="password" name="jelszo" id="jelszo">
+                <br>
+                <br>
+                <label for="telsz">Telefonszám: </label>
+                <input type="tel" name="telsz" id="telsz" placeholder="pl.: 06-30-1234567">
+                <br>
+                <br>
+                <label for="szuletes">Születési dátumod: </label>
+                <input type="date" name="szuletes" id="szuletes">
+                <br>
+                <br>
+                <label for="ferfi">
+                Mi a nemed?
+                <br>
+                Férfi</label><input type="radio" id="ferfi" name="nem" value="Ferfi">
+                <label for="no">Nő</label><input type="radio" id="no" name="nem" value="No">
+                <br>
+                <br>
+                <label for="polosz">Milyen színű polót kérsz?
+                    <br>A választott szín: </label>
+                <input type="color" name="polosz" id="polosz">
+                <br>
+                <br>
+                <label for="polom">Milyen méret legyen?
+                <br>
+                A választott méret:</label>
+                <select id="polom" name="polom">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+                <br><br>
+                <label for="elfogad">Biztosan tag szeretnél lenni?</label>
+                <input type="checkbox" id="elfogad" name="elfogad">
+                <br>
+                <br>
+                <input type="submit" value="Jelentkezés elküldése!">
+                </form>
+        </article>
+    </div>
+
+    <footer>
+        <p>Az oldal nem a hivatalos Fradi FC honlapja, oktatási célból készült.</p>
+        <p>Készítette: Nagy Roland Olivér</p>
+    </footer>
+</body>
+
+</html>

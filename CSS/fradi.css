@@ -1,0 +1,294 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #C7B53D;
+    font-family: 'Inconsolata', 'Times New Roman', Times, serif;
+}
+
+header {
+    text-align: center;
+    background-color: #151414;
+    padding: 10px;
+}
+
+.boritokep {
+    width: 100%;
+    max-width: 125px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #151414;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 10px;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul li a {
+    text-align: center;
+    text-decoration: none;
+    color: green;
+    display: inline-block;
+    padding: 15px;
+}
+
+#jelenlegi {
+    border: 2px solid green;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+nav li a:hover {
+    color: gold;
+    background-color: green;
+    border-radius: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #151414;
+    font-weight: bold;
+    color: white;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+.content article {
+    padding: 0px 20px;
+}
+
+.content figure {
+    display: flex;
+    align-self: center;
+}
+
+.sidekep {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+
+.profilkep {
+    border-radius: 35%;
+    width: 200px;
+}
+
+#ertekeles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+}
+
+#ertekeles article {
+    padding: 20px 20px 0px 20px;
+    text-align: center;
+}
+
+#ertekeles figure {
+    display: flex;
+    align-self: center;
+}
+
+#video {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+#images {
+    margin: auto;
+    width: 90vw;
+    height: 90vw;
+}
+
+#kepgalleria {
+    padding: 10px;
+}
+
+#cim {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.gombok {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+#konnyu{
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    display: none;
+}
+#konnyu article {
+    padding: 20px;
+}
+
+#konnyu figure {
+    display: flex;
+    align-self: center;
+}
+#kozepes{
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    display: none;
+}
+#kozepes article {
+    padding: 20px;
+}
+#kozepes figure {
+    display: flex;
+    align-self: center;
+}
+#nehez{
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    display: none;
+}
+#nehez article {
+    padding: 20px;
+}
+#nehez figure {
+    display: flex;
+    align-self: center;
+}
+#bekuldesGomb{
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    display: none;
+}
+#nehez1{
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+    margin-top: 30px;
+}
+#bkozep{
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+#legyelteis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+}
+#legyelteis article h2{
+    font-size: 30px;
+}
+#legyelteis article{
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+}
+label.error{
+    color: red;
+}
+@media all and (min-width: 600px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .gombok {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #images {
+        margin: auto;
+        width: 65vw;
+        height: 65vw;
+    }
+
+}
+
+@media all and (min-width: 768px) {
+    .content {
+        flex-direction: row;
+    }
+    #konnyu{
+        flex-direction: row;
+        align-items: center;
+    }
+    #konnyu article{
+        padding: 0px;
+    }
+    #kozepes{
+        flex-direction: row;
+        align-items: center;
+    }
+    #kozepes article{
+        padding: 0px;
+    }
+    #nehez{
+        flex-direction: row;
+        align-items: center;
+    }
+    #nehez article{
+        padding: 0px;
+    }
+    .sidekep {
+        width: 500px;
+    }
+
+    #images {
+        margin: auto;
+        width: 40vw;
+        height: 40vw;
+    }
+    #bkozep{
+        width: 500px;
+    }
+}
