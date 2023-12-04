@@ -10,6 +10,11 @@ let nehezetvalasztott = 0;
 /*Konnyu játék megjelenítése*/
 document.getElementById('konnyuG').addEventListener("click", konnyuKiv);
 function konnyuKiv() {
+    document.getElementById('konnyu1').value = "ures";
+    document.getElementById('konnyu2').value = "ures";
+    document.getElementById('konnyu3').value = "ures";
+    document.getElementById('konnyu4').value = "ures";
+    document.getElementById('eredmeny').innerHTML = "";
     kTartalom.style.display = 'flex';
     kpTartalom.style.display = 'none';
     nTartalom.style.display = 'none';
@@ -19,6 +24,11 @@ function konnyuKiv() {
 /*Közepes játék megjelenítése*/
 document.getElementById('kozepesG').addEventListener("click", kozepesKiv);
 function kozepesKiv() {
+    document.getElementById('kozepes1').value = null;
+    document.getElementById('kozepes2').value = null;
+    document.getElementById('kozepes3').value = null;
+    document.getElementById('kozepes4').value = null;
+    document.getElementById('eredmeny').innerHTML = "";
     kTartalom.style.display = 'none';
     kpTartalom.style.display = 'flex';
     nTartalom.style.display = 'none';
@@ -28,6 +38,8 @@ function kozepesKiv() {
 /*Nehéz játék megjelenítése*/
 document.getElementById('nehezG').addEventListener("click", nehezKiv);
 function nehezKiv() {
+    document.getElementById('nehez1').value = null;
+    document.getElementById('eredmeny').innerHTML = "";
     kTartalom.style.display = 'none';
     kpTartalom.style.display = 'none';
     nTartalom.style.display = 'flex';
@@ -65,6 +77,10 @@ function ujjatek() {
 /*Válaszok kiértékelése*/
 document.getElementById('bekuldes').addEventListener("click", bekuld);
 
+function szame(n) {
+    return (n * 1 == n)
+}
+
 function bekuld() {
     let pont = 0;
     if (konnyutvalasztott == 1) {
@@ -84,9 +100,30 @@ function bekuld() {
 
     if (kozepesetvalasztott == 1) {
         let nev = document.getElementById('kozepes1').value;
-        let kor = parseInt(document.getElementById('kozepes2').value);
-        let elsoprofi = parseInt(document.getElementById('kozepes3').value);
-        let miotafradi = parseInt(document.getElementById('kozepes4').value);
+        let kor = document.getElementById('kozepes2').value;
+        let elsoprofi = document.getElementById('kozepes3').value;
+        let miotafradi = document.getElementById('kozepes4').value;
+
+        if (szame(kor)) {
+            kor = parseInt(kor);
+        } else {
+            alert("Nem számot adott meg a korhoz, adja meg újra!");
+            document.getElementById('kozepes2').value = null;
+            return;
+        }
+        if (szame(elsoprofi)) {
+            elsoprofi = parseInt(elsoprofi);
+        } else {
+            alert("Nem számot adott meg az első profi játékhoz, adja meg újra!");
+            document.getElementById('kozepes3').value = null;
+            return;
+        } if (szame(miotafradi)) {
+            miotafradi = parseInt(miotafradi);
+        } else {
+            alert("Nem számot adott meg arra, hogy mióta játszik a Fradiban, adja meg újra!");
+            document.getElementById('kozepes4').value = null;
+            return;
+        }
         if (nev == "Varga Barnabás" || nev == "Varga" || nev == "Barnabás") {
             pont = pont + 1;
         }
@@ -109,10 +146,10 @@ function bekuld() {
         if (valasz.includes("33")) {
             pont = pont + 1;
         }
-        if (valasz.includes("18")){
+        if (valasz.includes("18")) {
             pont = pont + 1;
         }
-        if (valasz.includes("2014")){
+        if (valasz.includes("2014")) {
             pont = pont + 1;
         }
     }

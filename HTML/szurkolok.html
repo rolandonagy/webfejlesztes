@@ -24,7 +24,10 @@
                         required: true,
                         email: true
                     },
-                    jelszo: "required",
+                    jelszo:{
+                        required: true,
+                        minlength: 8
+                    },
                     telsz: "required",
                     szuletes: "required",
                     nem: "required",
@@ -34,7 +37,10 @@
                 messages: {
                     nev: "<br>Írd be a teljes neved!",
                     email: "<br>Írd be az email címed, hogy el tudjunk érni vagy valós emailt adj meg!",
-                    jelszo: "<br>Kérlek add meg a jelszavad a profil létrehozás miatt!",
+                    jelszo: {
+                        required: "<br>Kérlek add meg a jelszavad a profil létrehozás miatt!",
+                        minlength: "<br>Kérlek minimum 8 karakter legyen a jelszó!"
+                    },
                     telsz: "<br>Írd be az telefonszámod címed, hogy el tudjunk érni!",
                     szuletes: "<br>Kérlek töltsd ki a születési dátumod!",
                     nem: "<br>Kérlek add meg a nemed!",
@@ -43,7 +49,7 @@
             });
         });
     </script>
-    <title>Fradi - Főoldal</title>
+    <title>Fradi - Szurkolók</title>
 </head>
 
 <body>
@@ -57,7 +63,7 @@
             <li><a href="index.html">Fradiról</a></li>
             <li><a href="stadion.html">Stadionról</a></li>
             <li><a href="jatekosok.html">Játékosok</a></li>
-            <li><a href="#" id="jelenlegi">Szurkólók</a></li>
+            <li><a href="#" id="jelenlegi">Szurkolók</a></li>
         </ul>
     </nav>
     <div class="content">
