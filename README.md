@@ -1,4 +1,4 @@
-# webfejlesztes
+# webfejlesztes beadandó ReadMe
 1. Készitő: Nagy Roland Olivér
    
 3. Weboldal url-je: https://rolandonagy.github.io/webfejlesztes/HTML/index.html
@@ -8,6 +8,9 @@
 6. Javascript kód a harmadik oldalt található a játékosok.html-el oldal alján. 3 nehézségi szint közül lehet választani. Az könnyű szinten a teljes kép látszik, valamint legördülő listából lehet kiválasztani a válaszokat. A közepes szinten márcsak a focista fél arca látszik és itt már magunktól kell megválaszolni a kérdéseket. A nehéz fokozatban pedig csak a focista szeme látszik és itt nekünk kell mindent leírni arról, akiről tudjuk hogy a képen van és a kulcsdolgok alapján pontoz. A kérdések és a választási lehetőséget egészen addig nem látszanak, ameddig egy nehézségi fokozat nincs kiválasztva. Amennyiben beküldjük a választ kapunk egy pontot. Új játékra is van lehetőség, ekkor alaphelyzetbe állítja az űrlapot és eltünteti, így újra csak a három gomb látható.
    
 5.Egyedi font: Az egész oldalon az Inconsolata típust használtam, melynek forrása megtalálható az alábbi linken: https://fonts.googleapis.com/css?family=Inconsolata&displ
+
+
+
 Források:
 Favicon: https://hu.m.wikipedia.org/wiki/F%C3%A1jl:A_Ferencv%C3%A1rosi_TC_c%C3%ADmere.png , majd https://favicon.io/ -val átgenerálás.
 Boritókép: https://www.fradi.hu/labdarugas/elso-csapat/hirek/unnepeltjeink208
