@@ -10,7 +10,6 @@
 5.Egyedi font: Az egész oldalon az Inconsolata típust használtam, melynek forrása megtalálható az alábbi linken: https://fonts.googleapis.com/css?family=Inconsolata&displ
 
 
-
 Források:
 Favicon: https://hu.m.wikipedia.org/wiki/F%C3%A1jl:A_Ferencv%C3%A1rosi_TC_c%C3%ADmere.png , majd https://favicon.io/ -val átgenerálás.
 Boritókép: https://www.fradi.hu/labdarugas/elso-csapat/hirek/unnepeltjeink208
